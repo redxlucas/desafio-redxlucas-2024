@@ -1,0 +1,87 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%; /* Define 60% da largura para as tabelas */
+}
+
+.table-animais, .table-recintos {
+    width: 50%; /* Faz com que as tabelas ocupem toda a largura possível */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Estilos para o lado direito (formulário e resultado) */
+.right-side {
+    width: 35%; /* Define 35% da largura para o formulário e resultado */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    padding: 10px;
+    border: 1px solid black;
+    min-height: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column; /* Empilha as tabelas e o formulário verticalmente em telas pequenas */
+    }
+
+    .left-side, .right-side {
+        width: 100%; /* Ambas as seções ocupam 100% da largura */
+    }
+}
