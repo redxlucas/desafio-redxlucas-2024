@@ -113,13 +113,13 @@
                     <label for="animal" class="form-label">
                         <h4>Insira a Espécie do Animal:</h4>
                     </label>
-                    <input type="text" class="form-control" id="animal" name="animal" placeholder="Ex: Leão">
+                    <input type="text" class="form-control" id="animal" name="animal" placeholder="Exemplo: Leão" required>
                 </div>
                 <div class="col-md-6">
                     <label for="quantidade" class="form-label">
                         <h4>Insira a Quantidade:</h4>
                     </label>
-                    <input type="number" class="form-control" id="quantidade" name="quantidade" required>
+                    <input type="number" class="form-control" id="quantidade" name="quantidade" min="1" required>
                 </div>
             </div>
             <button type="submit" class="btn btn-outline-light mt-3" id="checkout-btn">Verificar Recintos</button>
