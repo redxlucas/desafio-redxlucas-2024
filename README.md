@@ -1,10 +1,20 @@
 # RECINTOS DO ZOO
+Este projeto foi realizado com a finalidade de um desafio técnico proposto pela empresa DB, sendo necessário a criação de uma aplicação que ajudasse a encontrar locais para animais que estão de chegada, pensando em seu conforto e no dos animais que já estavam no recinto.
+# TECNOLOGIAS UTILIZADAS
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" /> <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"/>
+- Javascript para o backend funcionalidades de interação com o usuário.
+- HTML, CSS e Bootstrap para criação e estilização da página web.
+- Jest para testes unitários.
 
 ## JUSTIFICATIVA DE MUDANÇAS
 Principais mudanças feitas durante o desenvolvimento:
--
--
--
+- Criação de front-end: torna mais fácil a abstração e a ideia esperada do projeto.
+- Criação de mais testes unitários para aprimorar a validação do código.
+- Adicionada a propriedade 'carnivoro' para indicar se o animal é carnívoro.
+
+## EXEMPLO DA PÁGINA WEB
+![desafio-db-2024-frontend](https://github.com/user-attachments/assets/6af1b97b-febd-472c-8be5-a9b5df32b4d9)
+
 
 ## COMO BAIXAR O CÓDIGO E SUBMETER MINHA SOLUÇÃO?
 Para completar a etapa do desafio você terá que baixar a estrutura do código aqui na Azure, resolver o desafio usando Javascript e entregá-lo no repositório no seu github.
