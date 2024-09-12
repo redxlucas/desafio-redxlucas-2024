@@ -1,5 +1,5 @@
 # RECINTOS DO ZOO
-Este projeto foi realizado com a finalidade de um desafio técnico proposto pela empresa DB, sendo necessário a criação de uma aplicação que ajudasse a encontrar locais para animais que estão de chegada, pensando em seu conforto e no dos animais que já estavam no recinto.
+Desafio técnico proposto pela empresa DB, sendo necessário a criação de uma aplicação que ajudasse a encontrar locais para a alocação de novos animais, respeitando seu conforto e suas necessidades.
 
 ## INICIANDO A PÁGINA WEB
 - Pelo Github Pages através desse [link](https://redxlucas.github.io/desafio-redxlucas-2024/)
@@ -7,7 +7,7 @@ Este projeto foi realizado com a finalidade de um desafio técnico proposto pela
 
 # TECNOLOGIAS UTILIZADAS
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" /> <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"/>
-- Javascript para o backend funcionalidades de interação com o usuário.
+- Javascript para a criação da aplicação e funcionalidades de interação com o usuário.
 - HTML, CSS e Bootstrap para criação e estilização da página web.
 - Jest para testes unitários.
 
