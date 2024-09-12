@@ -1,87 +1,171 @@
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+    background-color: #ffffff;
 }
 
 .main {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
-    justify-content: space-between;
-    padding: 20px;
+    max-width: 50vw;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.left-side {
+.left-side{
+    .tables-container {
+        display: flex;
+        flex-direction: column; /* Alinha as tabelas uma acima da outra */
+        gap: 20px; /* Espaçamento entre as tabelas */
+        align-items: flex-start; /* Mantém as tabelas à esquerda */
+    }
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.tables-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     gap: 20px;
-    width: 60%; /* Define 60% da largura para as tabelas */
+    margin-bottom: 30px;
 }
 
-.table-animais, .table-recintos {
-    width: 50%; /* Faz com que as tabelas ocupem toda a largura possível */
+.animais, .recintos {
+    flex: 1;
+    min-width: 300px;
+}
+
+table {
+    width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin: 25px 0;
+
+}
+
+table, th, td {
+    border: 1px solid #d1d1d1;
 }
 
 th, td {
-    border: 1px solid black;
-    padding: 8px;
+    padding: 10px;
     text-align: left;
+    
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: #f3f3f3;
 }
 
-/* Estilos para o lado direito (formulário e resultado) */
-.right-side {
-    width: 35%; /* Define 35% da largura para o formulário e resultado */
+thead th {
+    
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.animais thead th{
+    background-color: #269710;
+}
+
+.recintos thead th{
+    background-color: #d17a09;
+}
+
+.form-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#animal-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input[type="text"], input[type="number"] {
+input {
+    width: 50%; /* Ajusta o tamanho dos inputs */
+    margin-bottom: 10px; /* Espaçamento entre os inputs */
     padding: 8px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
     font-size: 16px;
 }
 
-button:hover {
-    background-color: #45a049;
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
 }
 
-#result {
-    padding: 10px;
-    border: 1px solid black;
-    min-height: 50px;
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }
 
 /* Responsividade */
-@media (max-width: 900px) {
-    .main {
-        flex-direction: column; /* Empilha as tabelas e o formulário verticalmente em telas pequenas */
+@media (max-width: 768px) {
+    .tables-container {
+        flex-direction: column;
     }
 
-    .left-side, .right-side {
-        width: 100%; /* Ambas as seções ocupam 100% da largura */
+    .animais, .recintos {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    table, th, td {
+        font-size: 14px;
+    }
+
+    input, button {
+        font-size: 14px;
     }
 }

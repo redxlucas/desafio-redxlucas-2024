@@ -7,8 +7,8 @@ import { RecintosZoo } from './recintos-zoo.js';
         form.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const animal = form.elements['animal'].value.toUpperCase().trim();
-            const quantidade = parseInt(form.elements['quantidade'].value);
+            const animal = form.elements['animal'].value.toUpperCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+            const quantidade = form.elements['quantidade'].value;
 
             const resultado = recintosZoo.analisaRecintos(animal, quantidade);
 
