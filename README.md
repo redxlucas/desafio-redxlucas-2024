@@ -12,6 +12,10 @@ Principais mudanças feitas durante o desenvolvimento:
 - Criação de mais testes unitários para aprimorar a validação do código.
 - Adicionada a propriedade 'carnivoro' para indicar se o animal é carnívoro.
 
+## INICIANDO A PÁGINA WEB
+- Pelo Github Pages através desse [link]
+- Ou clonando esse repositório e iniciando a página em servidor local (localhost).
+
 ## EXEMPLO DA PÁGINA WEB
 ![desafio-db-2024-frontend](https://github.com/user-attachments/assets/6af1b97b-febd-472c-8be5-a9b5df32b4d9)
 
