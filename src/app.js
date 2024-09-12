@@ -1,20 +1,33 @@
 import { RecintosZoo } from './recintos-zoo.js';
 
-        const recintosZoo = new RecintosZoo();
-        const form = document.getElementById('animal-form');
-        const resultElement = document.getElementById('result');
+document.addEventListener('DOMContentLoaded', function () {
+    const recintosZoo = new RecintosZoo();
+    const form = document.getElementById('animal-form');
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
+    const alertaSucesso = document.getElementById('success-alert');
+    const alertaErro = document.getElementById('error-alert');
+    const mensagemSucesso = document.getElementById('success-message');
+    const mensagemErro = document.getElementById('error-message');
 
-            const animal = form.elements['animal'].value.toUpperCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-            const quantidade = form.elements['quantidade'].value;
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-            const resultado = recintosZoo.analisaRecintos(animal, quantidade);
+        const animal = form.elements['animal'].value.toUpperCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+        const quantidade = form.elements['quantidade'].value;
 
-            if (resultado.erro) {
-                resultElement.textContent = resultado.erro;
-            } else {
-                resultElement.textContent = `Recintos viáveis: ${resultado.recintosViaveis.join(', ')}`;
-            }
-        });
+        alertaSucesso.classList.add('d-none');
+        alertaErro.classList.add('d-none');
+
+        const resultado = recintosZoo.analisaRecintos(animal, quantidade);
+
+        if (resultado.erro) {
+            mensagemErro.textContent = resultado.erro;
+            alertaErro.classList.remove('d-none');
+            alertaErro.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            mensagemSucesso.textContent = `Recintos viáveis: ${resultado.recintosViaveis.join(', ')}`;
+            alertaSucesso.classList.remove('d-none');
+            alertaSucesso.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
