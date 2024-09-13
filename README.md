@@ -14,6 +14,7 @@ Desafio técnico proposto pela empresa DB, sendo necessário a criação de uma 
 ## JUSTIFICATIVA DE MUDANÇAS
 Principais mudanças feitas durante o desenvolvimento:
 - Criação de front-end: torna mais fácil a abstração e a ideia esperada do projeto.
+- Alteração na entrada de dados no front-end, podendo aceitar nome de animais com acentuação e com capitalização.
 - Criação de mais testes unitários para aprimorar a validação do código.
 - Adicionada a propriedade 'carnivoro' para indicar se o animal é carnívoro.
   
