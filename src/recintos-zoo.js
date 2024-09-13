@@ -100,16 +100,21 @@ class RecintosZoo {
     }
 
     /**
-     * 
-     * @param {*} recinto 
-     * @param {*} animal 
-     * @returns 
+     * Método que verifica se o animal se sente confortável em pelo menos um dos biomas.
+     * @param {*} recinto Recinto a ser verificado.
+     * @param {*} animal Animal a ser verificado conforto.
+     * @returns Retorna caso o animal se sinta confortável no bioma ou biomas analisados.
      */
     verificaBioma(recinto, animal){
         const bioma = recinto.bioma.split(' e ');
         return animal.biomas.some(b => bioma.includes(b));
     }
 
+    /**
+     * Método que verifica se há algum animal carnívoro no recinto.
+     * @param {*} recinto Recinto a ser verificado se há algum animal carnívoro.
+     * @returns Retorna true caso aja um animal carnívoro.
+     */
     verificaEspecieCarnivora(recinto){
         return recinto.animais.some(a => this.animais[a.especie].carnivoro);
     }
